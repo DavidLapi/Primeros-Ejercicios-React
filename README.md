@@ -28,3 +28,4 @@
 
 <h1>Vista previa</h1>
 
+![Vista_previa](img/vista-previa.png)
