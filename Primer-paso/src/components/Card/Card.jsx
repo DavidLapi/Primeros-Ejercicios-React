@@ -17,7 +17,7 @@ export default Card
 */
 
 //Ejercicio con extras básicos (props)
-
+/*
 import React from 'react'
 import './Card.css'
 
@@ -27,6 +27,28 @@ const Card = (props) => {
         <img class="card-img" alt={props.altImagen} src={props.dirImagen} />
         <h1 class="card-title">{props.title}</h1>
         <p class="card-descripcion">{props.descripcion}</p>
+    </div>
+  )
+}
+
+export default Card
+*/
+//Ejercicio con extras intermedios (props, boton de alerta, y color de fondo)
+
+import React from 'react'
+import './Card.css'
+
+function handleClick(texto = "Has hecho click!") {
+    return alert(texto);
+}
+
+const Card = (props) => {
+  return (
+    <div className="card" style={{ backgroundColor: props.backColor }}>
+        <img className="card-img" alt={props.altImagen} src={props.dirImagen} />
+        <h1 className="card-title">{props.title}</h1>
+        <p className="card-descripcion">{props.descripcion}</p>
+        <button className="card-btn" onClick={() => handleClick(props.textoMensaje)}>Información</button>
     </div>
   )
 }
